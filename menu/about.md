@@ -8,7 +8,7 @@ image:
   creditlink:
 ---
 
-
+### 孟文霞
 
 
 I received my bachelor's degree from [Inner Mongolia University](http://www.imu.edu.cn/) with the  class ranking [(1/35)](/assets/img/rank.jpg). Then, I'm studying for my master's degree at [Institute of Software](http://english.is.cas.cn/) of [Chinese Academy of Sciences](http://english.cas.cn/) and will graduate in 2019. 
@@ -47,5 +47,5 @@ OVERALL: 6.0
 　　　　    
 
     
-    
+
 ![1](/assets/img/01.jpg) | ![1](/assets/img/2.jpg)|![1](/assets/img/3.jpg) | ![1](/assets/img/4.jpg)
