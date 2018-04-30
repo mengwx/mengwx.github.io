@@ -23,10 +23,8 @@ I received my bachelor's degree from [Inner Mongolia University](http://www.imu.
     
 **Papers:**    
 
-[徐扬,孟文霞,李广建.基于灰色预测模型的情报学热点主题发展预测[J].情报科学.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=QBKX201607001&uid=WEEvREcwSlJHSldRa1FhcTdWZDluYU9WNDIyRUs0N1NzNVZBd3FXQTdIZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MDk3OTdZUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTDJmYnVWdkZDdmxVNzdOTkMvQWRyRzRIOWZNcUk5Rlo=)*[CSSCI]*     
-
-[Yang XU, Wenxia MENG, Information Management Issues and Business Model Analysis of O2O Games. ICIM. 2017](/assets/img/ICIM2017.pdf)*[EI]*      
-
+[徐扬,孟文霞,李广建.基于灰色预测模型的情报学热点主题发展预测[J].情报科学.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=QBKX201607001&uid=WEEvREcwSlJHSldRa1FhcTdWZDluYU9WNDIyRUs0N1NzNVZBd3FXQTdIZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MDk3OTdZUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTDJmYnVWdkZDdmxVNzdOTkMvQWRyRzRIOWZNcUk5Rlo=) *[CSSCI]*     
+[Yang XU, Wenxia MENG, Information Management Issues and Business Model Analysis of O2O Games. ICIM. 2017.](/assets/img/ICIM2017.pdf) *[EI]*      
 廖瑞杰,杨绍发,孟文霞,董春梅. SegGraph:室外场景三维点云闭环检测算法[J].计算机研究与发展. (Accepted)      
 
     
@@ -39,13 +37,14 @@ ACM-ICPC China Inner Mongolia Autonomous Region Pergramming Contest|[Second Peiz
 [Vice-Chairman of the Student Union](https://mp.weixin.qq.com/s/39xQMbd5tIienFR-MmxAqA) | Institute of Software, Chinese Academy of Sciences|2017     
 
 
+
 **IELTS:**    
          
 OVERALL: 6.0      
-
 (Still studying and improving)
 　　　　    
 
     
-
+    
+    
 ![1](/assets/img/01.jpg) | ![1](/assets/img/2.jpg)|![1](/assets/img/3.jpg) | ![1](/assets/img/4.jpg)
