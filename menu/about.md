@@ -33,22 +33,19 @@ I received my bachelor's degree from [Inner Mongolia University](http://www.imu.
 **Others:**    
 
 ACM-ICPC China Inner Mongolia Autonomous Region Pergramming Contest|[Second Peize](/assets/img/ACM-ICPC.jpg)|2013      
-
 [China Undergraduate Scientific and Technological Innovation Project](/assets/img/G1.jpg)|[Software Copyright](/assets/img/G3.jpg)|2014     
-
 [Merit Student](/assets/img/S1.jpg) | Chinese Academy of Sciences | 2017      
-
-
 [Excellent Student Cadre](/assets/img/S1.jpg) | Chinese Academy of Sciences|2017      
-
-
 [Vice-Chairman of the Student Union](https://mp.weixin.qq.com/s/39xQMbd5tIienFR-MmxAqA) | Institute of Software, Chinese Academy of Sciences|2017     
 
 
-
 **IELTS:**    
+         
+OVERALL: 6.0      
 
-OVERALL: 6.0  (Still studying and improving.)
+(Still studying and improving)
 　　　　    
 
+    
+    
 ![1](/assets/img/01.jpg) | ![1](/assets/img/2.jpg)|![1](/assets/img/3.jpg) | ![1](/assets/img/4.jpg)
