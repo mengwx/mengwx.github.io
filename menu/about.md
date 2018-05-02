@@ -25,7 +25,7 @@ I received my bachelor's (Information Management and Information Systems) from [
 
 [徐扬,孟文霞,李广建.基于灰色预测模型的情报学热点主题发展预测[J].情报科学. (Yang XU, Wenxia MENG, Guangjian LI. Forecasting Hot Topics of Information Science Based on Grey Prediction Model)](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=QBKX201607001&uid=WEEvREcwSlJHSldRa1FhcTdWZDluYU9WNDIyRUs0N1NzNVZBd3FXQTdIZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MDk3OTdZUjhlWDFMdXhZUzdEaDFUM3FUcldNMUZyQ1VSTDJmYnVWdkZDdmxVNzdOTkMvQWRyRzRIOWZNcUk5Rlo=) *[CSSCI]*     
 [Yang XU, Wenxia MENG. Information Management Issues and Business Model Analysis of O2O Games. ICIM. 2017.](/assets/img/ICIM2017.pdf) *[EI]*      
-廖瑞杰,杨绍发,孟文霞,董春梅. SegGraph:室外场景三维点云闭环检测算法[J].计算机研究与发展. (SegGraph: An Algorithm for Loop-Closure Detection in Outdoor 
+廖瑞杰,杨绍发,孟文霞,董春梅. SegGraph:室外场景三维点云闭环检测算法[J].计算机研究与发展.(SegGraph: An Algorithm for Loop-Closure Detection in Outdoor 
 Scenes using 3D Point Clouds) (Accepted)      
 
     
