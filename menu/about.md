@@ -34,14 +34,14 @@ ACM-ICPC China Inner Mongolia Autonomous Region Pergramming Contest|[Second Peiz
 [China Undergraduate Scientific and Technological Innovation Project](/assets/img/G1.jpg)|[Software Copyright](/assets/img/G3.jpg)|2014     
 [Merit Student](/assets/img/S1.jpg) | Chinese Academy of Sciences | 2017      
 [Excellent Student Cadre](/assets/img/S2.jpg) | Chinese Academy of Sciences|2017      
-[Vice-Chairman of the Student Union](https://mp.weixin.qq.com/s/39xQMbd5tIienFR-MmxAqA) | Institute of Software, Chinese Academy of Sciences|2017     
+[Vice-President of the Student Union](https://mp.weixin.qq.com/s/39xQMbd5tIienFR-MmxAqA) | Institute of Software, Chinese Academy of Sciences|2017     
 
 
 
 **IELTS:**    
          
-OVERALL: 6.0      
-(Still studying and improving)
+OVERALL: 6.0      (Still studying and improving)       
+
 　　　　    
 
     
