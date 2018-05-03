@@ -23,7 +23,7 @@ I received my bachelor's (Information Management and Information Systems) from [
     
 **Papers:**    
 
-[徐扬,孟文霞,李广建.基于灰色预测模型的情报学热点主题发展预测[J].情报科学.](/assets/IMG/HSYC.pdf) *[CSSCI]*        
+[徐扬,孟文霞,李广建.基于灰色预测模型的情报学热点主题发展预测[J].情报科学.](/assets/img/HSYC.pdf) *[CSSCI]*        
 廖瑞杰,杨绍发,孟文霞,董春梅. SegGraph:室外场景三维点云闭环检测算法[J].计算机研究与发展.*[Accepted]*      
 
     
