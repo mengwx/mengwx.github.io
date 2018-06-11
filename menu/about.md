@@ -37,11 +37,10 @@ ACM-ICPC China Inner Mongolia Autonomous Region Pergramming Contest|[Second Peiz
 
 
 
-**IELTS:**    
-         
-OVERALL: 6.0      (Still studying and improving)       
+    
 
-　　　　    
+    
+    
 
     
     
