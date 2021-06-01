@@ -1,1 +1,0 @@
-[Yang XU, Wenxia MENG, Information Management Issues and Business Model Analysis of O2O Games. International Conference on Information Management 2017, Chengdu, China.](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7950361)*[IEEE Xplore, EI]*
