@@ -112,8 +112,7 @@ COCO detection, and COCO segmentation.
 
 ## Object Detection
 Object Detection主要解决的问题是What and Where：   
-![1](/images/blog/2017-3-21/1.png)
-Object Detection的常见算法可以见高伟毅师兄整理的笔记[[https://gwyve.github.io/]](https://gwyve.github.io/)    
+![1](/images/blog/2017-3-21/1.png)  
     
 附上krosaen的GitHub上的Deep Learning Papers Reading Roadmap 中Object Detection部分:[[原文地址]](https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap/blob/master/README.md)
 
