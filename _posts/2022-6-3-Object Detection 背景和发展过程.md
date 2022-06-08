@@ -6,7 +6,6 @@ author: "孟文霞"
 
 ---
 
-**声明**：文中的内容主要是基于个人理解，难免有错误的地方，如有不当之处敬请指出，我的邮箱是[[mengwenxia16@mails.usac.ac.cn]](mengwenxia16@mails.usac.ac.cn)
 
 ## CNN卷积方式
 神经网络的基础入门和卷积的基本方式参考台湾大学李宏毅教授的讲义：[[deep learning.pdf]](/images/blog/2017-3-21/deep learning.pdf)    
