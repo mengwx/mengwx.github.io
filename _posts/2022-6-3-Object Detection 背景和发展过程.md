@@ -37,8 +37,7 @@ ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%,
 compared to 26.2% achieved by the second-best entry.    
 
 
-**特点**：使用了GPU和dropout，网络结构如下图：    
-![alexnet](/images/blog/2017-3-21/2.jpg)
+**特点**：使用了GPU和dropout
 
 ## VGG   
 **原文**：[[VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION]](https://arxiv.org/pdf/1409.1556.pdf)       
@@ -55,9 +54,7 @@ generalise well to other datasets, where they achieve state-of-the-art results. 
 have made our two best-performing ConvNet models publicly available to facilitate
 further research on the use of deep visual representations in computer vision.     
 
-**特点**：使用了3×3的Filter，卷积的层数增加到16-19。下图为VGG中用到的模型：    
-![VGG](/images/blog/2017-3-21/VGG1.png)    下图为VGG中的实验结果，其中16-19层的效果最好：
-![VGG](/images/blog/2017-3-21/VGG2.png)   
+**特点**：使用了3×3的Filter，卷积的层数增加到16-19。
 
 
 ## GoogLeNet   
@@ -111,10 +108,7 @@ residual nets are foundations of our submissions to ILSVRC
 places on the tasks of ImageNet detection, ImageNet localization,
 COCO detection, and COCO segmentation.    
 
-**特点**：解决了Deeper neural networks难以训练的问题。训练单元如图：
-![resnet](/images/blog/2017-3-21/resnet1.png)
-网络结构如图：    
-![resnet](/images/blog/2017-3-21/resnet2.png)
+**特点**：解决了Deeper neural networks难以训练的问题。
 
 ## Object Detection
 Object Detection主要解决的问题是What and Where：   
