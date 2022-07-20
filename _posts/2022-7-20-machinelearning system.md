@@ -80,6 +80,15 @@ CPU在深度学习中起到什么作用？当在GPU上运行深度网络时，CP
 
 ## 资源调度
 集群管理和资源调度的主要功能是将硬件资源给不同的进程进行分配，并管理集群中各类硬件的使用，现在主流公司的平台的选择如下：
+
+ |平台|公司名称|集群管理和调度
+ |:----|:--------|:------------|
+ |百度|PaddlePaddle|Docker+Kubernetes|
+ |腾讯|Angel|Docker+Yarn|
+ |阿里|X-DeepLarning|Docker+Yarn|
+ |360|XLearning|Yarn|
+ |京东|登月平台|Docker+Kubernetes|
+ |才云科技|Clever|Docker+Kubernetes|
  
 ### Yarn
 Apache Hadoop YARN （Yet Another Resource Negotiator，另一种资源协调者）是一种新的 Hadoop 资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，它的引入为集群在利用率、资源统一管理和数据共享等方面带来了巨大好处。
