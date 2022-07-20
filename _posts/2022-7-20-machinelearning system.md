@@ -35,6 +35,7 @@ author: "孟文霞"
 ### 核心算力
 #### GPU
 GPU在处理图形的时候，从最初的设计就能够执行并行指令，从一个GPU核心收到一组多边形数据，到完成所有处理并输出图像可以做到完全独立。由于最初GPU就采用了大量的执行单元，这些执行单元可以轻松的加载并行处理，而不像CPU那样的单线程处理。另外，现代的GPU也可以在每个指令周期执行更多的单一指令。所以GPU比CPU更适合深度学习的大量矩阵、卷积运算的需求。深度学习的应用与其原先的应用需求颇为类似。GPU厂家顺理成章的在深度学习，找到了新增长点。
+
 英伟达以其大规模的并行GPU和专用GPU编程框架CUDA主导着当前的深度学习市场。但是越来越多的公司开发出了用于深度学习的加速硬件，比如谷歌的张量处理单元（TPU/Tensor Processing Unit）、英特尔的Xeon Phi Knight's Landing，以及高通的神经网络处理器（NNU/Neural Network Processor）。就科学研究而言，覆盖的领域已经在指数式扩张了。而这也已经突破了图像识别的范畴，进入到了语音识别、自然语言理解等其它任务中。
 
 
@@ -42,14 +43,19 @@ GPU在处理图形的时候，从最初的设计就能够执行并行指令，�
 2. [【GPU选择测评】深度学习训练模型的硬件条件（点评）](https://blog.csdn.net/yiyayiya557/article/details/105368108?)
 #### FPGA
 GPU已经支持各种主流开源框架，提供友好的界面和可视化的方式。相比之下，FPGA可编程芯片或者是人工神经网络专属芯片对于植入服务器以及编程环境、编程能力要求更高，还缺乏通用的潜力，不适合普及。
+
 目前来说，GPU贵，功耗高，运行效率比FPGA高，易使用。FPGA功耗，单颗性能是低的，单颗FPGA的硬件设计挑战没有GPU大，但是总体性价比和效率不占优；Intel收购Altera是否可以通过其工艺实力，给其带来极具的功能提升，我们还在长期的期待过程中。FPGA如果实现深度学习功能，还需要大批量使用，才能实现完整的功能，且需要与CPU相结合。
+
 另外一个问题是，FPGA的大规模开发难度偏高，从业人员少。我们可以通过ARM战胜MIPS、以及STM32的迅速发展可以看到，一个好的生态环境，更多的从业人口，比技术、性价比本身更利于其发展。所以易用性是几个并行技术发展的一个重要考量维度。
+
 FPGA犹如乐高，其灵活性，根据实际应用的需求，构建我所需要的硬件组件。但是乐高本身就是一种浪费：其功耗性能比，可变布线资源、多余的逻辑资源，其实都是浪费。所以你如果用乐高做一个机器人跟一个专门为格斗而开发的机器人对抗，结果可想而知。FPGA在深度学习的应用场景，存在的价值在于其灵活性。DNN是深度神经网络系统的统称，实际使用的时候，使用几层网络，最终结果用什么样的筛选策略，在不同的应用和不同的设计框架下面，对硬件的诉求并不相同。
+
 GPU的一个缺点是，他的组件模块是乘法器、加法器。虽然深度学习的参数都是数学模型，需要对RTL级别的变化，但是GPU的硬件资源是以乘法器、加法器这样量级的硬件单元组成的。如果GPU的预先配置与使用者的模型相差甚远。例如：加法器配置15个，乘法器配置15个。但实际使用的时候，乘法器使用量是15个，但是加法器只需要2个。这就浪费了13个加法器的资源。而FPGA是以查找表和触发器子单元，组合成任意运算单元。但是换种角度来看FPGA本身就是一种浪费。
 #### TPU（ASIC）
-谷歌发布了人工智能芯片：Tensor Processing Unit，这是ASIC。据知情人士说，TPU已经在谷歌的数据中心运行了一年时间，由于谷歌严守TPU的秘密，所以TPU一直不为外界所知。这位知情人士说，从目前的运行效果来看，TPU每瓦能耗的学习效果和效率都比传统的CPU、GPU高出一个数量级，达到了摩尔定律预言的七年后的CPU的运行效果。
-这位知情人士不无煽情的说，请忘掉CPU、GPU、FPGA吧。如此看来，在深度学习方面，TPU可以兼具桌面机与嵌入式设备的功能，也就是低能耗高速度。
-据报道，TPU之所以具有良好的机器学习能力，是因为这种芯片具有比较宽的容错性，这就意味着，达到与通用芯片相同的学习效果，TPU不需要通用芯片那样多的晶体管，不需要通用芯片上那样多的程序操作步骤，也就是说，相同数量的晶体管，在TPU上能做更多的学习工作。
+谷歌发布了人工智能芯片：Tensor Processing Unit，这是ASIC。据知情人士说，TPU已经在谷歌的数据中心运行了一年时间，由于谷歌严守TPU的秘密，所以TPU一直不为外界所知。这位知情人士说，从目前的运行效果来看，TPU每瓦能耗的学习效果和效率都比传统的CPU、GPU高出一个数量级，达到了摩尔定律预言的七年后的CPU的运行效果。在深度学习方面，TPU可以兼具桌面机与嵌入式设备的功能，也就是低能耗高速度。
+
+TPU之所以具有良好的机器学习能力，是因为这种芯片具有比较宽的容错性，这就意味着，达到与通用芯片相同的学习效果，TPU不需要通用芯片那样多的晶体管，不需要通用芯片上那样多的程序操作步骤，也就是说，相同数量的晶体管，在TPU上能做更多的学习工作。
+
 谷歌研发TPU并非要取代CPU或者FPGA，谷歌认为，TPU是介于CPU和ASIC (application-specific integrated circuit：应用集成电路)之间的芯片。ASIC用于专门的任务，比如去除噪声的电路，播放视频的电路，但是ASIC明显的短板是不可更改任务。通用CPU可以通过编程来适应各种任务，但是效率能耗比就不如ASIC。
 #### 异构处理器
 异构处理器异构多核处理器指的是在CPU里集成了 CPU与其他模块一起同步工作，也就是说 一块cpu 里不单有 CPU运算模块 还有其他运算模块 例如 GPU,FPGA,DSP等等。
@@ -75,68 +81,48 @@ CPU在深度学习中起到什么作用？当在GPU上运行深度网络时，CP
  
 ### Yarn
 Apache Hadoop YARN （Yet Another Resource Negotiator，另一种资源协调者）是一种新的 Hadoop 资源管理器，它是一个通用资源管理系统，可为上层应用提供统一的资源管理和调度，它的引入为集群在利用率、资源统一管理和数据共享等方面带来了巨大好处。
+
 YARN的基本思想是将JobTracker的两个主要功能（资源管理和作业调度/监控）分离，主要方法是创建一个全局的ResourceManager（RM）和若干个针对应用程序的ApplicationMaster（AM）。这里的应用程序是指传统的MapReduce作业或作业的DAG（有向无环图）。
+
 YARN 分层结构的本质是 ResourceManager。这个实体控制整个集群并管理应用程序向基础计算资源的分配。ResourceManager 将各个资源部分（计算、内存、带宽等）精心安排给基础 NodeManager（YARN 的每节点代理）。ResourceManager 还与 ApplicationMaster 一起分配资源，与 NodeManager 一起启动和监视它们的基础应用程序。在此上下文中，ApplicationMaster 承担了以前的 TaskTracker 的一些角色，ResourceManager 承担了 JobTracker 的角色。
+
 ApplicationMaster 管理一个在 YARN 内运行的应用程序的每个实例。ApplicationMaster 负责协调来自 ResourceManager 的资源，并通过 NodeManager 监视容器的执行和资源使用（CPU、内存等的资源分配）。请注意，尽管目前的资源更加传统（CPU 核心、内存），但未来会带来基于手头任务的新资源类型（比如图形处理单元或专用处理设备）。从 YARN 角度讲，ApplicationMaster 是用户代码，因此存在潜在的安全问题。YARN 假设 ApplicationMaster 存在错误或者甚至是恶意的，因此将它们当作无特权的代码对待。
+
 NodeManager 管理一个 YARN 集群中的每个节点。NodeManager 提供针对集群中每个节点的服务，从监督对一个容器的终生管理到监视资源和跟踪节点健康。MRv1 通过插槽管理 Map 和 Reduce 任务的执行，而 NodeManager 管理抽象容器，这些容器代表着可供一个特定应用程序使用的针对每个节点的资源。YARN 继续使用 HDFS 层。它的主要 NameNode 用于元数据服务，而 DataNode 用于分散在一个集群中的复制存储服务。
+
 要使用一个 YARN 集群，首先需要来自包含一个应用程序的客户的请求。ResourceManager 协商一个容器的必要资源，启动一个 ApplicationMaster 来表示已提交的应用程序。通过使用一个资源请求协议，ApplicationMaster 协商每个节点上供应用程序使用的资源容器。执行应用程序时，ApplicationMaster 监视容器直到完成。当应用程序完成时，ApplicationMaster 从 ResourceManager 注销其容器，执行周期就完成了。 
 ### Docker
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows操作系统的机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
 ### Kubernetes
 Kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用，Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,Kubernetes提供了应用部署，规划，更新，维护的一种机制。
+
 Kubernetes一个核心的特点就是能够自主的管理容器来保证云平台中的容器按照用户的期望状态运行着（比如用户想让apache一直运行，用户不需要关心怎么去做，Kubernetes会自动去监控，然后去重启，新建，总之，让apache一直提供服务），管理员可以加载一个微型服务，让规划器来找到合适的位置，同时，Kubernetes也系统提升工具以及人性化方面，让用户能够方便的部署自己的应用（就像canary deployments）。
 ## 计算框架
-框架	简介	优点	缺点
-Theano		2008年诞生于LISA实验室，其设计具有较浓厚的学术气息。 作为第一个Python深度学习框架，Theano很好的完成了自己的使命，为之后深度学习框架的开发奠定了基本设计方向： 以计算图为框架的核心，采用GPU加速计算
-	(1) Python+NumPy的组合；
-(2) 使用计算图； 
-(3) 学习门槛低
-	(1) 比Torch臃肿； 
-(2) 不支持分布式；
-(3) 大模型的编译时间有时要很久，调试困难； 
-(4) 目前已停止开发
-TensorFlow	2015年诞生于Google，可以看作是Theano的后继者。TensorFlow作为当前最流行的深度学习框架，它拥有一个全面而灵活的生态系统，其中包含各种工具、库和社区资源	(1) 具有更好的计算图可视化效果；
-(2) 可扩展性强，能部署在各种服务器和移动设备上；
-(3) 出色的社区支持；
-(4) 性能优异	(1) 过于复杂的系统设计，总代码量超过100万行，维护困难；
-(2) 接口设计复杂，且频繁变动；(3) 图构造是静态的，必须先被‘编译’再运行
-Keras		2015年诞生于Google，是一个用Python编写的高级神经网络 API，它能够以 TensorFlow, CNTK,或者Theano作为后端运行。Keras的开发重点是支持快速的实验	
-	(1) 简单容易上手；
-(2) 提供规范丰富的文档；
-(3) 基于Python实现，易调试易扩展；(4) 可使用theano和tensorflow两个backend		(1) 缺少灵活性；(2) 运行速度慢
-
-CaffeCaffe2		Caffe 2014年诞生于伯克利，核心语言是C++，支持命令行、python和MATLAB接口，可在CPU和GPU上运行。 Caffe2诞生于2017年的Facebook，其沿袭了大量的Caffe设计，是一个兼具表现力、速度和模块性的开源深度学习框架	Caffe:
-(1) 简洁快速，易用性强；(2) 可支持Matlab 和 Python 接口
-Caffe2: 
-(1) 轻量级，扩展性好；(2) 性能优异；
-(3) 几乎全平台支持	Caffe: 
-(1) 缺少灵活性；
-(2) 在递归神经网络上表现不佳
-Caffe2: 
-(1) 官方未提供完整的文档；
-(2) 安装复杂，编译过程常出现异常
-MXNet	MXNet是一个深度学习库，支持各种常见的语言，其借鉴了Caffe的思想，但实现更干净。2016年，MXNet被AWS正式选择为其云计算的官方深度学习平台	(1) 支持灵活的动态图和高效的静态图，性能优异；(2) 扩展性好，分布式性能强大，可移植性强；(3) 支持多种语言和平台	(1) 入门门槛高；(2) 文档不完善，更新慢；
-(3) 代码有一些小bug
-CNTK		2016年诞生于微软，根据开发者描述，CNTK的性能比主流工具都要强。CNTK表现比较均衡，没有明显的短板	(1) 性能出众；
-(2) 在语音领域效果突出	(1) 社区活跃度不高；(2) 文档比较难懂；
-(3) 目前不支持ARM架构，限制了其在移动设备上的发挥
-PyTorch	2017年诞生于Facebook，PyTorch本质上是支持GPU的NumPy替代，配备了可用于构建和训练深度神经网络的更高级的功能。PyTorch是当前难得的简洁优雅且高效快速的框架	(1) 简洁，代码易于理解；(2) 速度快，优于TensorFlow和Keras等；(3) 灵活易用；(4) 社区活跃，文档完整		(1) 不支持移动设备部署；(2) 无可视化接口和工具
+ |框架 |	简介|	优点	|缺点
+ -|:-------|:----------|:--------|:-----
+ |Theano	 |	2008年诞生于LISA实验室，其设计具有较浓厚的学术气息。 作为第一个Python深度学习框架，Theano很好的完成了自己的使命，为之后深度学习框架的开发奠定了基本设计方向： 以计算图为框架的核心，采用GPU加速计算 |Python+NumPy的组合；<br>使用计算图； <br>学习门槛低 |	比Torch臃肿； <br>不支持分布式；<br>大模型的编译时间有时要很久，调试困难； <br>目前已停止开发
+ |TensorFlow	 |2015年诞生于Google，可以看作是Theano的后继者。TensorFlow作为当前最流行的深度学习框架，它拥有一个全面而灵活的生态系统，其中包含各种工具、库和社区资源	 |具有更好的计算图可视化效果；<br> 可扩展性强，能部署在各种服务器和移动设备上；<br>出色的社区支持；<br>性能优异	 |过于复杂的系统设计，总代码量超过100万行，维护困难；<br> 接口设计复杂，且频繁变动；<br> 图构造是静态的，必须先被‘编译’再运行
+ |Keras		 |2015年诞生于Google，是一个用Python编写的高级神经网络 API，它能够以 TensorFlow, CNTK,或者Theano作为后端运行。Keras的开发重点是支持快速的实验	 | 简单容易上手；<br> 提供规范丰富的文档；<br> 基于Python实现，易调试易扩展；<br> 可使用theano和tensorflow两个backend	 |	缺少灵活性；<br>运行速度慢
+ |CaffeCaffe2		 |Caffe 2014年诞生于伯克利，核心语言是C++，支持命令行、python和MATLAB接口，可在CPU和GPU上运行。 Caffe2诞生于2017年的Facebook，其沿袭了大量的Caffe设计，是一个兼具表现力、速度和模块性的开源深度学习框架	|Caffe: <br>简洁快速，易用性强；<br>可支持Matlab 和 Python 接口 <br>Caffe2: <br>轻量级，扩展性好；<br>性能优异；<br>几乎全平台支持 |	Caffe: <br>缺少灵活性；<br>在递归神经网络上表现不佳<br>Caffe2: <br>官方未提供完整的文档；<br> 安装复杂，编译过程常出现异常
+ |MXNet	 |MXNet是一个深度学习库，支持各种常见的语言，其借鉴了Caffe的思想，但实现更干净。2016年，MXNet被AWS正式选择为其云计算的官方深度学习平台	 |支持灵活的动态图和高效的静态图，性能优异；<br> 扩展性好，分布式性能强大，可移植性强；<br>支持多种语言和平台 |入门门槛高；<br>文档不完善，更新慢；<br>代码有一些小bug
+ |CNTK |2016年诞生于微软，根据开发者描述，CNTK的性能比主流工具都要强。CNTK表现比较均衡，没有明显的短板	 | 性能出众；<br> 在语音领域效果突出 |	社区活跃度不高；<br> 文档比较难懂；<br>目前不支持ARM架构，限制了其在移动设备上的发挥
+ |PyTorch	 |2017年诞生于Facebook，PyTorch本质上是支持GPU的NumPy替代，配备了可用于构建和训练深度神经网络的更高级的功能。PyTorch是当前难得的简洁优雅且高效快速的框架	 |简洁，代码易于理解；<br>  速度快，优于TensorFlow和Keras等；<br>  灵活易用；<br>  社区活跃，文档完整		 |不支持移动设备部署；<br> 无可视化接口和工具
 
 
 ## 存储
 ### HDFS
 HDFS是Google公司的 GFS论文 思想的实现，它由NameNode（名称节点）、DataNode（数据节点）、SecondaryNameNode（第二名称节点）组成。其中， NameNode 相当于论文中的 GFS Master ， DataNode 相当于论文中的 GFS Chunk Server 。GFS是一个可扩展的分布式文件系统设计思想，用于设计针对大型的、分布式的、对大量数据进行访问的文件系统。
 
-1.一文了解 HDFS 及其组成框架https://blog.csdn.net/qq_45069279/article/details/114483365
+1. [一文了解 HDFS 及其组成框架](https://blog.csdn.net/qq_45069279/article/details/114483365)
 ### Ceph
 Ceph是一个统一的分布式存储系统，设计初衷是提供较好的性能、可靠性和可扩展性。Ceph项目最早起源于Sage就读博士期间的工作（最早的成果于2004年发表），并随后贡献给开源社区。在经过了数年的发展之后，目前已得到众多云计算厂商的支持并被广泛应用。RedHat及OpenStack都可与Ceph整合以支持虚拟机镜像的后端存储。
 
-1.Ceph介绍及原理架构分享https://blog.csdn.net/weixin_44389885/article/details/86621691
+1. [Ceph介绍及原理架构分享](https://blog.csdn.net/weixin_44389885/article/details/86621691)
 ### Kafka
 Apache Kafka是一个开源消息系统，由Scala写成。是由Apache软件基金会开发的一个开源消息系统项目。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。
 Kafka是一个分布式消息队列：生产者、消费者的功能。它提供了类似于JMS的特性，但是在设计实现上完全不同，此外它并不是JMS规范的实现。Kafka对消息保存时根据Topic进行归类，发送消息者称为Producer,消息接受者称为Consumer,此外kafka集群有多个kafka实例组成，每个实例(server)成为broker。
 
-1.https://blog.csdn.net/programmer_union/article/details/104110001
+1. [kafka实战教程(python操作kafka--理论篇)](https://blog.csdn.net/programmer_union/article/details/104110001)
 
 此外，还有MySql、ES等存储方式可以使用。
 ## 总结
@@ -151,18 +137,17 @@ Kafka是一个分布式消息队列：生产者、消费者的功能。它提供
 
 
 ### 团队投入
-1.【时间成本及人力成本参考】想要快速的搭建高性能机器学习系统，企业应该怎么干？
-https://www.leiphone.com/category/ai/XSdnP4lUEXdSm0O5.html
+1.(【时间成本及人力成本参考】想要快速的搭建高性能机器学习系统，企业应该怎么干？)[https://www.leiphone.com/category/ai/XSdnP4lUEXdSm0O5.html]
 
 
 ## 企业应用实例
-1.汽车之家机器学习平台的架构与实践，CSDN，https://blog.csdn.net/hellozhxy/article/details/107210015
-2.微博推荐算法实践与机器学习平台演进，CSDN，https://blog.csdn.net/m0_37586850/article/details/116465255
-3.爱奇艺机器学习平台的建设实践，爱奇艺技术产品团队，https://mp.weixin.qq.com/s/Np4w7RC2JFlB7ZGIduu71w
-4.一站式机器学习平台在vivo AI的实践，InfoQ，https://www.infoq.cn/article/THlkStomYLRgXL2hzm8w
-5.一站式机器学习平台建设实践，美团技术团队，https://mp.weixin.qq.com/s/ZDRD0vAxkSqe4UeXi9avKQ
-6.再见，Yarn! 滴滴机器学习平台架构演进，AI前线，https://mp.weixin.qq.com/s/iTfHv8EFx4O4G1sNxsuMkg
-7.机器学习平台建设指南，51CTO，https://blog.51cto.com/u_15127595/2728751
-8.为什么我们需要机器学习平台？，ThoughtWorks，https://zhuanlan.zhihu.com/p/270170289
-9.从YARN迁移到k8s，滴滴机器学习平台二次开发是这样做的https://blog.csdn.net/iamlake/article/details/103343110
+1.[汽车之家机器学习平台的架构与实践，CSDN](https://blog.csdn.net/hellozhxy/article/details/107210015)
+2.[微博推荐算法实践与机器学习平台演进，CSDN](https://blog.csdn.net/m0_37586850/article/details/116465255)
+3.[爱奇艺机器学习平台的建设实践，爱奇艺技术产品团队](https://mp.weixin.qq.com/s/Np4w7RC2JFlB7ZGIduu71w)
+4.[一站式机器学习平台在vivo AI的实践，InfoQ](https://www.infoq.cn/article/THlkStomYLRgXL2hzm8w)
+5.[一站式机器学习平台建设实践，美团技术团队](https://mp.weixin.qq.com/s/ZDRD0vAxkSqe4UeXi9avKQ)
+6.[再见，Yarn! 滴滴机器学习平台架构演进，AI前线](https://mp.weixin.qq.com/s/iTfHv8EFx4O4G1sNxsuMkg)
+7.[机器学习平台建设指南，51CTO](https://blog.51cto.com/u_15127595/2728751)
+8.[为什么我们需要机器学习平台？，ThoughtWorks](https://zhuanlan.zhihu.com/p/270170289)
+9.[从YARN迁移到k8s，滴滴机器学习平台二次开发是这样做的](https://blog.csdn.net/iamlake/article/details/103343110)
 
