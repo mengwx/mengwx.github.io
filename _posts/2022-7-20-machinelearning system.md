@@ -41,6 +41,8 @@ GPU在处理图形的时候，从最初的设计就能够执行并行指令，�
 
 1. [史上最新最全的深度学习计算机硬件配置方案](https://blog.csdn.net/Su_wenfeng/article/details/79869852)
 2. [【GPU选择测评】深度学习训练模型的硬件条件（点评）](https://blog.csdn.net/yiyayiya557/article/details/105368108?)
+
+
 #### FPGA
 GPU已经支持各种主流开源框架，提供友好的界面和可视化的方式。相比之下，FPGA可编程芯片或者是人工神经网络专属芯片对于植入服务器以及编程环境、编程能力要求更高，还缺乏通用的潜力，不适合普及。
 
@@ -98,8 +100,9 @@ Kubernetes是一个开源的，用于管理云平台中多个主机上的容器�
 
 Kubernetes一个核心的特点就是能够自主的管理容器来保证云平台中的容器按照用户的期望状态运行着（比如用户想让apache一直运行，用户不需要关心怎么去做，Kubernetes会自动去监控，然后去重启，新建，总之，让apache一直提供服务），管理员可以加载一个微型服务，让规划器来找到合适的位置，同时，Kubernetes也系统提升工具以及人性化方面，让用户能够方便的部署自己的应用（就像canary deployments）。
 ## 计算框架
+
  |框架 |	简介|	优点	|缺点
- -|:-------|:----------|:--------|:-----
+ |:-------|:----------|:--------|:-----
  |Theano	 |	2008年诞生于LISA实验室，其设计具有较浓厚的学术气息。 作为第一个Python深度学习框架，Theano很好的完成了自己的使命，为之后深度学习框架的开发奠定了基本设计方向： 以计算图为框架的核心，采用GPU加速计算 |Python+NumPy的组合；<br>使用计算图； <br>学习门槛低 |	比Torch臃肿； <br>不支持分布式；<br>大模型的编译时间有时要很久，调试困难； <br>目前已停止开发
  |TensorFlow	 |2015年诞生于Google，可以看作是Theano的后继者。TensorFlow作为当前最流行的深度学习框架，它拥有一个全面而灵活的生态系统，其中包含各种工具、库和社区资源	 |具有更好的计算图可视化效果；<br> 可扩展性强，能部署在各种服务器和移动设备上；<br>出色的社区支持；<br>性能优异	 |过于复杂的系统设计，总代码量超过100万行，维护困难；<br> 接口设计复杂，且频繁变动；<br> 图构造是静态的，必须先被‘编译’再运行
  |Keras		 |2015年诞生于Google，是一个用Python编写的高级神经网络 API，它能够以 TensorFlow, CNTK,或者Theano作为后端运行。Keras的开发重点是支持快速的实验	 | 简单容易上手；<br> 提供规范丰富的文档；<br> 基于Python实现，易调试易扩展；<br> 可使用theano和tensorflow两个backend	 |	缺少灵活性；<br>运行速度慢
@@ -114,10 +117,12 @@ Kubernetes一个核心的特点就是能够自主的管理容器来保证云平�
 HDFS是Google公司的 GFS论文 思想的实现，它由NameNode（名称节点）、DataNode（数据节点）、SecondaryNameNode（第二名称节点）组成。其中， NameNode 相当于论文中的 GFS Master ， DataNode 相当于论文中的 GFS Chunk Server 。GFS是一个可扩展的分布式文件系统设计思想，用于设计针对大型的、分布式的、对大量数据进行访问的文件系统。
 
 1. [一文了解 HDFS 及其组成框架](https://blog.csdn.net/qq_45069279/article/details/114483365)
+
 ### Ceph
 Ceph是一个统一的分布式存储系统，设计初衷是提供较好的性能、可靠性和可扩展性。Ceph项目最早起源于Sage就读博士期间的工作（最早的成果于2004年发表），并随后贡献给开源社区。在经过了数年的发展之后，目前已得到众多云计算厂商的支持并被广泛应用。RedHat及OpenStack都可与Ceph整合以支持虚拟机镜像的后端存储。
 
 1. [Ceph介绍及原理架构分享](https://blog.csdn.net/weixin_44389885/article/details/86621691)
+
 ### Kafka
 Apache Kafka是一个开源消息系统，由Scala写成。是由Apache软件基金会开发的一个开源消息系统项目。Kafka最初是由LinkedIn开发，并于2011年初开源。2012年10月从Apache Incubator毕业。该项目的目标是为处理实时数据提供一个统一、高通量、低等待的平台。
 Kafka是一个分布式消息队列：生产者、消费者的功能。它提供了类似于JMS的特性，但是在设计实现上完全不同，此外它并不是JMS规范的实现。Kafka对消息保存时根据Topic进行归类，发送消息者称为Producer,消息接受者称为Consumer,此外kafka集群有多个kafka实例组成，每个实例(server)成为broker。
@@ -137,17 +142,17 @@ Kafka是一个分布式消息队列：生产者、消费者的功能。它提供
 
 
 ### 团队投入
-1.(【时间成本及人力成本参考】想要快速的搭建高性能机器学习系统，企业应该怎么干？)[https://www.leiphone.com/category/ai/XSdnP4lUEXdSm0O5.html]
+1. [【时间成本及人力成本参考】想要快速的搭建高性能机器学习系统，企业应该怎么干？](https://www.leiphone.com/category/ai/XSdnP4lUEXdSm0O5.html)
 
 
 ## 企业应用实例
-1.[汽车之家机器学习平台的架构与实践，CSDN](https://blog.csdn.net/hellozhxy/article/details/107210015)
-2.[微博推荐算法实践与机器学习平台演进，CSDN](https://blog.csdn.net/m0_37586850/article/details/116465255)
-3.[爱奇艺机器学习平台的建设实践，爱奇艺技术产品团队](https://mp.weixin.qq.com/s/Np4w7RC2JFlB7ZGIduu71w)
-4.[一站式机器学习平台在vivo AI的实践，InfoQ](https://www.infoq.cn/article/THlkStomYLRgXL2hzm8w)
-5.[一站式机器学习平台建设实践，美团技术团队](https://mp.weixin.qq.com/s/ZDRD0vAxkSqe4UeXi9avKQ)
-6.[再见，Yarn! 滴滴机器学习平台架构演进，AI前线](https://mp.weixin.qq.com/s/iTfHv8EFx4O4G1sNxsuMkg)
-7.[机器学习平台建设指南，51CTO](https://blog.51cto.com/u_15127595/2728751)
-8.[为什么我们需要机器学习平台？，ThoughtWorks](https://zhuanlan.zhihu.com/p/270170289)
-9.[从YARN迁移到k8s，滴滴机器学习平台二次开发是这样做的](https://blog.csdn.net/iamlake/article/details/103343110)
+1. [汽车之家机器学习平台的架构与实践，CSDN](https://blog.csdn.net/hellozhxy/article/details/107210015)
+2. [微博推荐算法实践与机器学习平台演进，CSDN](https://blog.csdn.net/m0_37586850/article/details/116465255)
+3. [爱奇艺机器学习平台的建设实践，爱奇艺技术产品团队](https://mp.weixin.qq.com/s/Np4w7RC2JFlB7ZGIduu71w)
+4. [一站式机器学习平台在vivo AI的实践，InfoQ](https://www.infoq.cn/article/THlkStomYLRgXL2hzm8w)
+5. [一站式机器学习平台建设实践，美团技术团队](https://mp.weixin.qq.com/s/ZDRD0vAxkSqe4UeXi9avKQ)
+6. [再见，Yarn! 滴滴机器学习平台架构演进，AI前线](https://mp.weixin.qq.com/s/iTfHv8EFx4O4G1sNxsuMkg)
+7. [机器学习平台建设指南，51CTO](https://blog.51cto.com/u_15127595/2728751)
+8. [为什么我们需要机器学习平台？，ThoughtWorks](https://zhuanlan.zhihu.com/p/270170289)
+9. [从YARN迁移到k8s，滴滴机器学习平台二次开发是这样做的](https://blog.csdn.net/iamlake/article/details/103343110)
 
