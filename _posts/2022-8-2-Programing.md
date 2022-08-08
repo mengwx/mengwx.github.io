@@ -101,7 +101,7 @@ author: "孟文霞"
 	|RELATION| System_Init| Input_Rec |Print_Rec |Stat_Score|
 	|:---|:---|:---|:---|:---|
 	|Student| Create| Modify| Access| Access|
-	|Score Create| Modify |Access| Access| Modify|
+	|Score |Create| Modify |Access| Modify|
 
 	- 注: RELATION为操作关系; System_Init、Input_Rec、Print_Rec、Stat_Score为四个不同的函数; Student、Score为两个全局变量; Create表示创建, Modify表示修改, Access表示访问。
 	- 其中, 函数Input_Rec、Stat_Score都可修改变量Score, 故此变量将引起函数间较大的耦合, 并可能增加代码测试、维护的难度。
