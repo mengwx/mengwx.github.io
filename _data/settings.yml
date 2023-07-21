@@ -1,5 +1,5 @@
-title:  xx大赛
-tagline:  :)
+title:  第一届xx大赛
+tagline:  2023 北京
 
 # Authors documented under _data
 
@@ -12,8 +12,8 @@ disqus:
 
 menu:
 - {name: 'ABOUT', url: 'about.html'}
-- {name: 'Details', url: 'writing.html'}
-- {name: 'Contact', url: 'contact.html'}
+- {name: 'DETAILS', url: 'writing.html'}
+- {name: 'CONTACT', url: 'contact.html'}
 
 social:
 - {icon: 'github', link: 'https://www.github.com/mengwx'}
