@@ -1,4 +1,4 @@
-title:  第一届xx大赛
+title:  第一届智能协同博弈算法大赛
 tagline:  2023 北京
 
 # Authors documented under _data
@@ -9,7 +9,7 @@ disqus:
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 #google-ID: 'UA-80213386-1'
-
+                                                                                              
 menu:
 - {name: 'ABOUT', url: 'about.html'}
 - {name: 'DETAILS', url: 'writing.html'}
