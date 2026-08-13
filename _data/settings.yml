@@ -1,5 +1,5 @@
-title:    MENGWX
-tagline:  2026 北京
+title:    梦映海景蓝
+tagline:  mengwx
 
 # Authors documented under _data
 
@@ -12,7 +12,7 @@ disqus:
                                                                                               
 menu:
 - {name: 'ABOUT', url: 'about.html'}
-- {name: 'writing', url: 'writing.html'}
+- {name: 'WRETING', url: 'writing.html'}
 - {name: 'CONTACT', url: 'contact.html'}
 
 social:
