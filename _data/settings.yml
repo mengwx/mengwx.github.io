@@ -12,7 +12,7 @@ disqus:
                                                                                               
 menu:
 - {name: 'ABOUT', url: 'about.html'}
-- {name: 'WRITING', url: 'writing.html'}
+- {name: 'BLOGS', url: 'blogs.html'}
 - {name: 'CONTACT', url: 'contact.html'}
 
 social:
