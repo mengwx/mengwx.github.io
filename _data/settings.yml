@@ -11,9 +11,9 @@ disqus:
 #google-ID: 'UA-80213386-1'
                                                                                               
 menu:
-#- {name: 'X', url: 'about.html'}
-- {name: 'BLOGS', url: 'writing.html'}
-- {name: 'CONTACT', url: 'contact.html'}
+- {name: 'X', url: 'X.html'}
+- {name: 'BLOGS', url: 'blogs.html'}
+#- {name: 'CONTACT', url: 'contact.html'}
 
 social:
 - {icon: 'github', link: 'https://www.github.com/mengwx'}
